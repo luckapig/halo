@@ -14,7 +14,7 @@ COPY --from=builder application/spring-boot-loader/ ./
 COPY --from=builder application/snapshot-dependencies/ ./
 COPY --from=builder application/application/ ./
 
-ENV JVM_OPTS="-Xmx256m -Xms256m" \
+ENV JVM_OPTS="-Xmx1024m -Xms1024m" \
     HALO_WORK_DIR="/root/.halo2" \
     SPRING_CONFIG_LOCATION="optional:classpath:/;optional:file:/root/.halo2/" \
     TZ=Asia/Shanghai
